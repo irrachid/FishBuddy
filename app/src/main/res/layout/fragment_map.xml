@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="MapFragmentBinding">
+        <variable name="viewModel" type="com.example.mayankrai.fishbuddy.screens.homescreen.mapscreen.MapViewModel" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#242f3e">
+
+        <fragment
+            android:id="@+id/mapFragment"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/map_margin_bottom"/>
+
+        <com.example.mayankrai.fishbuddy.utility.maps.PulseOverlayLayout
+            android:id="@+id/mapOverlayLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/map_margin_bottom">
+
+            <ImageView
+                android:id="@+id/mapPlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:transitionName="@string/mapPlaceholderTransition"/>
+
+        </com.example.mayankrai.fishbuddy.utility.maps.PulseOverlayLayout>
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.example.mayankrai.fishbuddy.utility.customview.ClickableViewPager
+                android:id="@+id/map_viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_gravity="bottom"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingEnd="@dimen/card_padding"
+                android:paddingLeft="@dimen/card_padding"
+                android:paddingRight="@dimen/card_padding"
+                android:paddingStart="@dimen/card_padding">
+
+            </com.example.mayankrai.fishbuddy.utility.customview.ClickableViewPager>
+
+        </FrameLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FishBuddy</string>
+
+    <string name="mapPlaceholderTransition">mapPlaceholderTransition</string>
+
+    <string name="map_api_key">AIzaSyDrPOquRmOvhGWImOV_ByVfswOUU-mB8w0</string>
+
+    <string name="map_server_key">AIzaSyDuwvdtouwgQUpPoiforkqpKJU5oF37QMI</string>
+
+</resources>

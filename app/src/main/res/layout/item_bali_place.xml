@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="MapPlaceFragmentBinding">
+        <variable name="viewModel" type="com.example.mayankrai.fishbuddy.screens.homescreen.mapscreen.viewpager.MapPlaceViewModel" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/frame"
+        android:layout_width="200dp"
+        android:layout_margin="16dp"
+        android:layout_height="200dp">
+
+
+        <FrameLayout
+            android:id="@+id/malam"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardUseCompatPadding="true"
+            android:layout_gravity="bottom"
+            android:id="@+id/root">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/headerImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:scaleType="center"
+                    android:layout_weight="1"
+                    app:imagePagerPlaceUrl="@{viewModel.imageUrl}"
+                    app:pagerPicasso="@{viewModel.picasso}"/>
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_margin="@dimen/default_layout_margin_halved"
+                    android:ellipsize="end"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/textsize_medium"
+                    android:transitionName="titleTransition"
+                    android:text="@{viewModel.name}"
+                    tools:text="Monkey Forest"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/default_layout_margin_quartered">
+
+                    <ImageView
+                        android:layout_width="@dimen/default_layout_margin"
+                        android:layout_height="@dimen/default_layout_margin"
+                        android:src="@drawable/circle"
+                        android:layout_marginStart="@dimen/default_layout_margin_halved"
+                        android:layout_marginEnd="@dimen/default_layout_margin_halved"/>
+
+                    <TextView
+                        android:id="@+id/opening_hours"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:ellipsize="end"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textSize="@dimen/textsize_small"
+                        android:text="@{viewModel.openingHours}"
+                        tools:text="08:30 - 18:00"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/default_layout_margin_halved">
+
+                    <ImageView
+                        android:layout_width="@dimen/default_layout_margin"
+                        android:layout_height="@dimen/default_layout_margin"
+                        android:src="@drawable/circle"
+                        android:layout_marginStart="@dimen/default_layout_margin_halved"
+                        android:layout_marginEnd="@dimen/default_layout_margin_halved"/>
+
+                    <TextView
+                        android:id='@+id/price'
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:ellipsize="end"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textSize="@dimen/textsize_small"
+                        android:text="@{viewModel.price}"
+                        tools:text="40000 IDR"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="@dimen/item_recycler_number_dimen"
+            android:layout_height="@dimen/item_recycler_number_dimen"
+            android:translationY="24dp"
+            app:layout_anchor="@id/root"
+            app:cardBackgroundColor="@color/transparent"
+            app:layout_anchorGravity="center_horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="@dimen/item_recycler_number_dimen"
+                android:layout_height="@dimen/item_recycler_number_dimen"
+                android:text="@{viewModel.id}"
+                tools:text="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/circle"/>
+        </android.support.v7.widget.CardView>
+
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>
+

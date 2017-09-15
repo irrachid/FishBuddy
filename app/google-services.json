@@ -1,0 +1,58 @@
+{
+  "project_info": {
+    "project_number": "483474399621",
+    "firebase_url": "https://fishbuddy-a34d6.firebaseio.com",
+    "project_id": "fishbuddy-a34d6",
+    "storage_bucket": "fishbuddy-a34d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:483474399621:android:ba7b9c666ebc507b",
+        "android_client_info": {
+          "package_name": "com.example.mayankrai.fishbuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "483474399621-scnmvqtgadu4k284acq70hdaddb9eagr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mayankrai.fishbuddy",
+            "certificate_hash": "f5fb86ea952ab98322278d09087226cb05ced766"
+          }
+        },
+        {
+          "client_id": "483474399621-pmkn1q60va8g0h7dottu0oppbkmn9a55.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTM6LkLo8VxmTAHOHLPZM4UfyirjNUn8w"
+        },
+        {
+          "current_key": "AIzaSyCo5bTNisMqxVkZ67BtloJ53Ya38P5_y7o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "483474399621-pmkn1q60va8g0h7dottu0oppbkmn9a55.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

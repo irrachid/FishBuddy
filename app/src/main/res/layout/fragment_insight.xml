@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="InsightFragmentBinding">
+        <variable name="viewModel" type="com.example.mayankrai.fishbuddy.screens.homescreen.insightscreen.InsightViewModel" />
+    </data>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout_insight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabTextColor="@android:color/white"
+                app:tabSelectedTextColor="@android:color/white"
+                app:tabIndicatorColor="@android:color/white"
+                app:tabIndicatorHeight="6dp"
+                app:tabGravity="center"
+                app:tabMode="scrollable"
+                android:layout_alignParentBottom="true"
+                app:setInsightPager="@{(viewPagerInsight)}"/>
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPagerInsight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_above="@+id/tabLayout_insight"
+                app:setInsightAdapter="@{viewModel.insightPagerAdapter}"/>
+
+
+        </RelativeLayout>
+
+
+</layout>
